@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">User Info</string>
+    <string name="first_name">First Name:</string>
+    <string name="last_name">Last Name:</string>
+    <string name="gender">Gender:</string>
+    <string name="street">Street:</string>
+    <string name="city">City:</string>
+    <string name="state">State:</string>
+    <string name="phone">Phone:</string>
+    <string name="cell">Cell:</string>
+    <string name="email">Email:</string>
+    <string name="nationality">Nationality:</string>
+    <string name="loading">Loading, please wait</string>
+    <string name="get_users">Get Users</string>
+    <string name="no_network">Please check network connection</string>
+    <string name="offline">You are offline</string>
+</resources>
