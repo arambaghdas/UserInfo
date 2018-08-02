@@ -19,7 +19,6 @@ import com.example.test.userinfo.model.network.UserInfoResponse;
 import com.example.test.userinfo.ui.ItemClickListener;
 import com.example.test.userinfo.ui.OnLoadMoreListener;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -61,6 +60,10 @@ public class UserInfoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         });
     }
 
+    public void setUsersList( List<UserInfoResponse.Results> usersList) {
+       this.usersList = usersList;
+    }
+
     public void setOnLoadMoreListener(OnLoadMoreListener mOnLoadMoreListener) {
         this.onLoadMoreListener = mOnLoadMoreListener;
     }
@@ -96,7 +99,8 @@ public class UserInfoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             infoHolder.cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    itemClickListener.onItemClick(position, infoHolder.profileImageView);
+                    UserInfoResponse.Results userInfo = usersList.get(position);
+                    itemClickListener.onItemClick(userInfo, infoHolder.profileImageView);
                 }
             });
 
